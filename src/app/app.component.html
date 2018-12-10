@@ -1,11 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
 
-<h1>
- {{ 'TITLE' | translate }}!
-</h1>
-<div>
-  <button (click)="setLang('ua')">Language: UA</button>
-  <button (click)="setLang('es')">Language: ES</button>
-</div>
+        <div>
+            <h2>Fecha: {{today | dateWithLocale: lang : 'fullDate'}}</h2>
+        </div>
 
-<router-outlet></router-outlet>
+    <button (click)="english()">English</button>
+    <button (click)="spanish()">Spanish</button>
+

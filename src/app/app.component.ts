@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TranslateService } from './translate.service';
+import localeHe from '@angular/common/locales/he';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +7,19 @@ import { TranslateService } from './translate.service';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  data: any;
-  constructor(private translate: TranslateService) {
-    // translate.use('es').then(() => {
-    //   console.log(translate.data);
-    // });
-
-
+  today:any;
+  lang = "es";
+  // he = localeHe
+  constructor() {
+    // this.today = new Date();
+    // console.log(this.he);
+    
   }
-  setLang(lang: string) {
-    this.translate.use(lang);
+
+  english() {
+    this.lang = 'en'
+  }
+  spanish() {
+    this.lang = 'es'
   }
 }
