@@ -11,7 +11,7 @@ export class AppComponent {
   lang = "es";
   // he = localeHe
   constructor() {
-    // this.today = new Date();
+    this.today = new Date();
     // console.log(this.he);
     
   }
